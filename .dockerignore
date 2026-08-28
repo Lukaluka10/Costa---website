@@ -2,4 +2,3 @@
 .gitignore
 Dockerfile
 .dockerignore
-Caddyfile
