@@ -9,11 +9,6 @@
 	encode zstd gzip
 	file_server
 
-	# FAZA TESTIRANJA: globalni noindex na cijelom Railway deploymentu.
-	# .com je na Netlifyju i ova konfiguracija na njega nema uticaja.
-	# Uklanja se pri cutoveru, kad .ba postane primarni domen.
-	header X-Robots-Tag "noindex, nofollow"
-
 	@html path *.html /
 	header @html Cache-Control "public, max-age=0, must-revalidate"
 

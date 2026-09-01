@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://costaprosportrecovery.com/sitemap.xml
+Sitemap: https://costapro.ba/sitemap.xml
