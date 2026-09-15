@@ -33,6 +33,35 @@
     })(window, document, "clarity", "script", "vp40ejj4ta");
     </script>
 
+    <!-- Meta Pixel: HARDCODED here, not in GTM. If this is ever moved into GTM (GTM-5XQ25KWZ), delete this block first or PageViews will be counted twice.
+         Keep fbq.disablePushState = true; before fbq('init'): without it the product filter's URL change (?filter=...) fires an extra PageView on every click. -->
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq.disablePushState = true;
+    fbq('init', '1083569227592346');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1083569227592346&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <!-- Google Analytics 4: HARDCODED here, not in GTM. If this is ever moved into GTM (GTM-5XQ25KWZ), delete this block first or PageViews will be counted twice. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q9NFE45MBG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q9NFE45MBG');
+    </script>
+    <!-- End Google Analytics 4 -->
     <link rel="stylesheet" href="css/style.css">
     <script type="application/ld+json">
       {
@@ -158,21 +187,11 @@
                 </div>
                 <div class="products_wrap">
                   <div data-proizvod="limfna-drenaza" class="product_item">
-                    <div class="product_image-wrap"><img src="images/proizvodi/limfna 6 komora.webp" loading="lazy" width="1067" height="1600" sizes="(max-width: 1000px) 100vw, 1000px" alt="Uređaj za limfnu drenažu sa 6 komora za profesionalnu upotrebu" class="product_image"></div>
-                    <div class="product_item-content">
-                      <h3 class="card_item-text">Limfna drenaža – 6 komora</h3>
-                      <p class="product_benefit">Kompresijska terapija sa 6 komora za dubinsku limfnu drenažu — ubrzava oporavak i smanjuje otoke nogu.</p>
-                      <p class="product_description">Kompresijski uređaj · 6 komora</p>
-                      <p class="product_price">1.500 KM</p>
-                      <a href="https://wa.me/38766090731?text=Zdravo%2C%20zanima%20me%20proizvod%3A%20Limfna%20drena%C5%BEa%20%E2%80%93%206%20komora" class="product_wa-btn" target="_blank" rel="noopener">Naruči na WhatsApp</a>
-                      <p class="product_wa-reassurance">Brz odgovor · Nema obaveze kupovine</p>
-                    </div>
-                  </div>
-                  <div data-proizvod="limfna-drenaza" class="product_item">
                     <div class="product_image-wrap"><img src="images/proizvodi/proizvodi limfna.jpeg" loading="lazy" width="1066" height="1600" sizes="(max-width: 1000px) 100vw, 1000px" alt="Uređaj za limfnu drenažu sa 4 komore" class="product_image"></div>
                     <div class="product_item-content">
                       <h3 class="card_item-text">Limfna drenaža – 4 komore</h3>
                       <p class="product_benefit">Kompresijska terapija sa 4 komore i WiFi kontrolom — jednostavan oporavak nogu kod kuće.</p>
+                      <p class="product_benefit">Dostupan u veličinama M i L.</p>
                       <p class="product_description">Kompresijski uređaj · 4 komore · WiFi</p>
                       <p class="product_price">1.200 KM</p>
                       <a href="https://wa.me/38766090731?text=Zdravo%2C%20zanima%20me%20proizvod%3A%20Limfna%20drena%C5%BEa%20%E2%80%93%204%20komore" class="product_wa-btn" target="_blank" rel="noopener">Naruči na WhatsApp</a>
@@ -207,8 +226,23 @@
                       <h3 class="card_item-text">Sportski tejp</h3>
                       <p class="product_benefit">Stabilizira zglobove i sprečava povrede tokom intenzivnog treninga.</p>
                       <p class="product_description">5cmx10m</p>
+                      <div class="product_variants" role="group" aria-label="Boja">
+                        <button type="button" class="product_variant is-active" aria-pressed="true" data-img="images/proizvodi/Sportski tejp.webp" data-alt="Sportski tejp za stabilizaciju zglobova i mišića" data-wa="https://wa.me/38766090731?text=Zdravo%2C%20zanima%20me%20proizvod%3A%20Sportski%20tejp%205cmx10m%20%E2%80%93%20bijeli">Bijeli</button>
+                        <button type="button" class="product_variant" aria-pressed="false" data-img="images/proizvodi/Sportski tejp tamnoplavi.webp" data-alt="Tamnoplavi sportski tejp za stabilizaciju zglobova i mišića" data-wa="https://wa.me/38766090731?text=Zdravo%2C%20zanima%20me%20proizvod%3A%20Sportski%20tejp%205cmx10m%20%E2%80%93%20tamnoplavi">Tamnoplavi</button>
+                      </div>
                       <p class="product_price">8 KM</p>
-                      <a href="https://wa.me/38766090731?text=Zdravo%2C%20zanima%20me%20proizvod%3A%20Sportski%20tejp" class="product_wa-btn" target="_blank" rel="noopener">Naruči na WhatsApp</a>
+                      <a href="https://wa.me/38766090731?text=Zdravo%2C%20zanima%20me%20proizvod%3A%20Sportski%20tejp%205cmx10m%20%E2%80%93%20bijeli" class="product_wa-btn" target="_blank" rel="noopener">Naruči na WhatsApp</a>
+                      <p class="product_wa-reassurance">Brz odgovor · Nema obaveze kupovine</p>
+                    </div>
+                  </div>
+                  <div data-proizvod="tejp" class="product_item">
+                    <div class="product_image-wrap"><img src="images/proizvodi/Sportski tejp 13,7m.webp" loading="lazy" width="1600" height="1067" sizes="(max-width: 1000px) 100vw, 1000px" alt="Sportski tejp 5cmx13,7m za stabilizaciju zglobova i mišića" class="product_image"></div>
+                    <div class="product_item-content">
+                      <h3 class="card_item-text">Sportski tejp 13,7m</h3>
+                      <p class="product_benefit">Stabilizira zglobove i sprečava povrede tokom intenzivnog treninga.</p>
+                      <p class="product_description">5cmx13,7m</p>
+                      <p class="product_price">10 KM</p>
+                      <a href="https://wa.me/38766090731?text=Zdravo%2C%20zanima%20me%20proizvod%3A%20Sportski%20tejp%205cmx13%2C7m" class="product_wa-btn" target="_blank" rel="noopener">Naruči na WhatsApp</a>
                       <p class="product_wa-reassurance">Brz odgovor · Nema obaveze kupovine</p>
                     </div>
                   </div>
@@ -283,7 +317,7 @@
                       method="POST" id="email-form" name="email-form" >
                       <div class="formgroup"><label for="name" class="label">Ime</label><input class="input-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Vaše ime" type="text" id="name" required=""></div>
                       <div class="formgroup"><label for="email" class="label">Email</label><input class="input-field w-input" maxlength="256" name="email" data-name="Email" placeholder="primjer@email.com" type="email" id="email" required=""></div>
-                      <div class="formgroup"><label for="product-interest" class="label">Koji proizvod vas zanima?</label><select name="product" id="product-interest" class="input-field w-input"><option value="">Odaberi proizvod (opciono)</option><option value="Sportski tejp">Sportski tejp</option><option value="Samoljepljiva bandaža">Samoljepljiva-Elastična bandaža</option><option value="Podbandažna spužvica">Podbandažna spužvica</option><option value="Kineziološka traka">Kineziološka traka</option><option value="Limfna drenaža (4 komore)">Limfna drenaža – 4 komore</option><option value="Limfna drenaža (6 komora)">Limfna drenaža – 6 komora</option><option value="Pištolj za masažu">Pištolj za masažu</option><option value="Opšte pitanje">Opšte pitanje</option></select></div>
+                      <div class="formgroup"><label for="product-interest" class="label">Koji proizvod vas zanima?</label><select name="product" id="product-interest" class="input-field w-input"><option value="">Odaberi proizvod (opciono)</option><option value="Sportski tejp">Sportski tejp</option><option value="Sportski tejp 13,7m">Sportski tejp 13,7m</option><option value="Samoljepljiva bandaža">Samoljepljiva-Elastična bandaža</option><option value="Podbandažna spužvica">Podbandažna spužvica</option><option value="Kineziološka traka">Kineziološka traka</option><option value="Limfna drenaža (4 komore)">Limfna drenaža – 4 komore</option><option value="Pištolj za masažu">Pištolj za masažu</option><option value="Opšte pitanje">Opšte pitanje</option></select></div>
                       <div class="formgroup"><label for="field" class="label">Poruka</label><textarea placeholder="Ovdje unesite vašu poruku..." maxlength="5000" id="field" name="field" data-name="Field" class="textarea w-input"></textarea></div>
                       <button class="submit-button" type="submit">Pošalji poruku</button>
                     </form>
@@ -394,6 +428,21 @@ checkboxes.forEach(cb => cb.addEventListener('change', applyFilter));
 
 // --- Initialize ---
 initFiltersFromURL();
+
+// --- Colour variants: swap photo and WhatsApp message ---
+document.querySelectorAll('.product_variant').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.product_item');
+    const img = card.querySelector('.product_image');
+    card.querySelectorAll('.product_variant').forEach(b => {
+      b.classList.toggle('is-active', b === btn);
+      b.setAttribute('aria-pressed', b === btn);
+    });
+    img.src = btn.dataset.img;
+    img.alt = btn.dataset.alt;
+    card.querySelector('.product_wa-btn').href = btn.dataset.wa;
+  });
+});
 
     </script>
   

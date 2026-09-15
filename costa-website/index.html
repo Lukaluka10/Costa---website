@@ -79,6 +79,35 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "vp40ejj4ta");
 </script>
+    <!-- Meta Pixel: HARDCODED here, not in GTM. If this is ever moved into GTM (GTM-5XQ25KWZ), delete this block first or PageViews will be counted twice.
+         Keep fbq.disablePushState = true; before fbq('init'): without it the product filter's URL change (?filter=...) fires an extra PageView on every click. -->
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq.disablePushState = true;
+    fbq('init', '1083569227592346');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1083569227592346&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <!-- Google Analytics 4: HARDCODED here, not in GTM. If this is ever moved into GTM (GTM-5XQ25KWZ), delete this block first or PageViews will be counted twice. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q9NFE45MBG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q9NFE45MBG');
+    </script>
+    <!-- End Google Analytics 4 -->
   </head>
   <body class="body">
     <!-- Google Tag Manager (noscript) -->
@@ -284,7 +313,7 @@
                       method="POST" id="email-form" name="email-form" >
                       <div class="formgroup"><label for="name" class="label">Ime</label><input class="input-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Vaše ime" type="text" id="name" required=""></div>
                       <div class="formgroup"><label for="email" class="label">Email</label><input class="input-field w-input" maxlength="256" name="email" data-name="Email" placeholder="primjer@email.com" type="email" id="email" required=""></div>
-                      <div class="formgroup"><label for="product-interest" class="label">Koji proizvod vas zanima?</label><select name="product" id="product-interest" class="input-field w-input"><option value="">Odaberi proizvod (opciono)</option><option value="Sportski tejp">Sportski tejp</option><option value="Samoljepljiva bandaža">Samoljepljiva-Elastična bandaža</option><option value="Podbandažna spužvica">Podbandažna spužvica</option><option value="Kineziološka traka">Kineziološka traka</option><option value="Limfna drenaža (4 komore)">Limfna drenaža – 4 komore</option><option value="Limfna drenaža (6 komora)">Limfna drenaža – 6 komora</option><option value="Pištolj za masažu">Pištolj za masažu</option><option value="Opšte pitanje">Opšte pitanje</option></select></div>
+                      <div class="formgroup"><label for="product-interest" class="label">Koji proizvod vas zanima?</label><select name="product" id="product-interest" class="input-field w-input"><option value="">Odaberi proizvod (opciono)</option><option value="Sportski tejp">Sportski tejp</option><option value="Sportski tejp 13,7m">Sportski tejp 13,7m</option><option value="Samoljepljiva bandaža">Samoljepljiva-Elastična bandaža</option><option value="Podbandažna spužvica">Podbandažna spužvica</option><option value="Kineziološka traka">Kineziološka traka</option><option value="Limfna drenaža (4 komore)">Limfna drenaža – 4 komore</option><option value="Pištolj za masažu">Pištolj za masažu</option><option value="Opšte pitanje">Opšte pitanje</option></select></div>
                       <div class="formgroup"><label for="field" class="label">Poruka</label><textarea placeholder="Ovdje unesite vašu poruku..." maxlength="5000" id="field" name="field" data-name="Field" class="textarea w-input"></textarea></div>
                       <button class="submit-button" type="submit">Pošalji poruku</button>
                     </form>

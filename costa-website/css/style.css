@@ -3659,3 +3659,33 @@ select.input-field {
     grid-template-columns: 1fr;
   }
 }
+
+/* === Product Colour Variants === */
+.product_variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 10px;
+}
+
+.product_variant {
+  padding: 7px 14px;
+  background-color: #fff;
+  color: #0d1526;
+  font-family: Onest, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid #eaecf0;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.product_variant:hover {
+  border-color: #b0b7c3;
+}
+
+.product_variant.is-active {
+  border-color: var(--color-primary);
+  background-color: rgba(0, 178, 255, 0.08);
+}
