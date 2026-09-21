@@ -191,8 +191,7 @@
                     <div class="product_item-content">
                       <h3 class="card_item-text">Limfna drenaža – 4 komore</h3>
                       <p class="product_benefit">Kompresijska terapija sa 4 komore i WiFi kontrolom — jednostavan oporavak nogu kod kuće.</p>
-                      <p class="product_benefit">Dostupan u veličinama M i L.</p>
-                      <p class="product_description">Kompresijski uređaj · 4 komore · WiFi</p>
+                      <p class="product_description">Kompresijski uređaj · 4 komore · WiFi · M/L</p>
                       <p class="product_price">1.200 KM</p>
                       <a href="https://wa.me/38766090731?text=Zdravo%2C%20zanima%20me%20proizvod%3A%20Limfna%20drena%C5%BEa%20%E2%80%93%204%20komore" class="product_wa-btn" target="_blank" rel="noopener">Naruči na WhatsApp</a>
                       <p class="product_wa-reassurance">Brz odgovor · Nema obaveze kupovine</p>
@@ -226,12 +225,8 @@
                       <h3 class="card_item-text">Sportski tejp</h3>
                       <p class="product_benefit">Stabilizira zglobove i sprečava povrede tokom intenzivnog treninga.</p>
                       <p class="product_description">5cmx10m</p>
-                      <div class="product_variants" role="group" aria-label="Boja">
-                        <button type="button" class="product_variant is-active" aria-pressed="true" data-img="images/proizvodi/Sportski tejp.webp" data-alt="Sportski tejp za stabilizaciju zglobova i mišića" data-wa="https://wa.me/38766090731?text=Zdravo%2C%20zanima%20me%20proizvod%3A%20Sportski%20tejp%205cmx10m%20%E2%80%93%20bijeli">Bijeli</button>
-                        <button type="button" class="product_variant" aria-pressed="false" data-img="images/proizvodi/Sportski tejp tamnoplavi.webp" data-alt="Tamnoplavi sportski tejp za stabilizaciju zglobova i mišića" data-wa="https://wa.me/38766090731?text=Zdravo%2C%20zanima%20me%20proizvod%3A%20Sportski%20tejp%205cmx10m%20%E2%80%93%20tamnoplavi">Tamnoplavi</button>
-                      </div>
                       <p class="product_price">8 KM</p>
-                      <a href="https://wa.me/38766090731?text=Zdravo%2C%20zanima%20me%20proizvod%3A%20Sportski%20tejp%205cmx10m%20%E2%80%93%20bijeli" class="product_wa-btn" target="_blank" rel="noopener">Naruči na WhatsApp</a>
+                      <a href="https://wa.me/38766090731?text=Zdravo%2C%20zanima%20me%20proizvod%3A%20Sportski%20tejp%205cmx10m" class="product_wa-btn" target="_blank" rel="noopener">Naruči na WhatsApp</a>
                       <p class="product_wa-reassurance">Brz odgovor · Nema obaveze kupovine</p>
                     </div>
                   </div>
@@ -252,7 +247,7 @@
                       <h3 class="card_item-text">Samoljepljiva-Elastična bandaža</h3>
                       <p class="product_benefit">Pruža čvrstu kompresiju i podršku bez ljepljive podloge.</p>
                       <p class="product_description">5cmx4.5m</p>
-                      <p class="product_price">6 KM</p>
+                      <p class="product_price">5 KM</p>
                       <a href="https://wa.me/38766090731?text=Zdravo%2C%20zanima%20me%20proizvod%3A%20Samoljepljiva-Elasti%C4%8Dna%20banda%C5%BEa" class="product_wa-btn" target="_blank" rel="noopener">Naruči na WhatsApp</a>
                       <p class="product_wa-reassurance">Brz odgovor · Nema obaveze kupovine</p>
                     </div>
@@ -429,20 +424,6 @@ checkboxes.forEach(cb => cb.addEventListener('change', applyFilter));
 // --- Initialize ---
 initFiltersFromURL();
 
-// --- Colour variants: swap photo and WhatsApp message ---
-document.querySelectorAll('.product_variant').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const card = btn.closest('.product_item');
-    const img = card.querySelector('.product_image');
-    card.querySelectorAll('.product_variant').forEach(b => {
-      b.classList.toggle('is-active', b === btn);
-      b.setAttribute('aria-pressed', b === btn);
-    });
-    img.src = btn.dataset.img;
-    img.alt = btn.dataset.alt;
-    card.querySelector('.product_wa-btn').href = btn.dataset.wa;
-  });
-});
 
     </script>
   
