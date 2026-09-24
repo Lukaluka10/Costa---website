@@ -3659,3 +3659,6 @@ select.input-field {
     grid-template-columns: 1fr;
   }
 }
+
+/* === Costa: kartice proizvoda ne smiju se širiti zbog dugog teksta === */
+.product_item, .product_item-content { min-width: 0; }
