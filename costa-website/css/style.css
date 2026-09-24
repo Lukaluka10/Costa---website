@@ -1,4 +1,3 @@
-@import url("https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap");
 
 html {
   -webkit-text-size-adjust: 100%;
@@ -2048,9 +2047,20 @@ textarea.w-input, textarea.w-select {
   display: grid;
 }
 
+
+/* Rezervni font s istom širinom kao Plateia: tekst ne "skače" dok se Plateia učitava */
+@font-face {
+  font-family: "Plateia Fallback";
+  src: local("Arial Bold"), local("Arial-BoldMT"), local("Arial"), local("Helvetica Neue"), local("Roboto");
+  font-weight: 700;
+  size-adjust: 158%;
+  ascent-override: 63%;
+  descent-override: 0%;
+  line-gap-override: 0%;
+}
 @font-face {
   font-family: Plateia;
-  src: url("../fonts/69032b785e318fe0478ef5e0_Plateia%20Bold.ttf") format("truetype");
+  src: url("../fonts/plateia-bold.woff2") format("woff2"), url("../fonts/69032b785e318fe0478ef5e0_Plateia%20Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -2058,7 +2068,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Onest Variablefont Wght;
-  src: url("../fonts/69032b91db7b9224659f5710_Onest-VariableFont_wght.ttf") format("truetype");
+  src: url("../fonts/onest-variable.woff2") format("woff2"), url("../fonts/69032b91db7b9224659f5710_Onest-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -2137,7 +2147,7 @@ h1 {
 h2 {
   margin-top: 20px;
   margin-bottom: 16px;
-  font-family: Plateia, Arial, sans-serif;
+  font-family: Plateia, "Plateia Fallback", Arial, sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 110%;
@@ -2265,7 +2275,7 @@ img {
 
 .hero_short-text {
   text-transform: uppercase;
-  font-family: Plateia, Arial, sans-serif;
+  font-family: Plateia, "Plateia Fallback", Arial, sans-serif;
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 2px;
@@ -2297,7 +2307,7 @@ img {
 }
 
 .heading {
-  font-family: Plateia, Arial, sans-serif;
+  font-family: Plateia, "Plateia Fallback", Arial, sans-serif;
   font-size: 52px;
   line-height: 115%;
 }
@@ -2307,12 +2317,12 @@ img {
 }
 
 .bold-text {
-  font-family: Plateia, Arial, sans-serif;
+  font-family: Plateia, "Plateia Fallback", Arial, sans-serif;
   font-weight: 700;
 }
 
 .marqee_content {
-  font-family: Plateia, Arial, sans-serif;
+  font-family: Plateia, "Plateia Fallback", Arial, sans-serif;
   font-size: 24px;
   position: relative;
 }
@@ -2398,7 +2408,7 @@ img {
 
 .section-tag {
   text-transform: uppercase;
-  font-family: Plateia, Arial, sans-serif;
+  font-family: Plateia, "Plateia Fallback", Arial, sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -2641,7 +2651,7 @@ img {
   text-align: left;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Plateia, Arial, sans-serif;
+  font-family: Plateia, "Plateia Fallback", Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.2;
@@ -2650,7 +2660,7 @@ img {
 
 .card_desc {
   text-align: left;
-  font-family: Plateia, Arial, sans-serif;
+  font-family: Plateia, "Plateia Fallback", Arial, sans-serif;
   font-size: 11px;
   font-weight: 400;
   line-height: 1.3;
@@ -2832,7 +2842,7 @@ img {
 }
 
 .card_item-text {
-  font-family: 'Clash Display', sans-serif;
+  font-family: "Onest Variablefont Wght", Arial, sans-serif;
   line-height: 1.2;
   font-size: 16px;
   font-weight: 700;
@@ -2864,7 +2874,7 @@ img {
   border-radius: 100px;
   margin-bottom: 0;
   padding: 9px 20px;
-  font-family: Plateia, Arial, sans-serif;
+  font-family: Plateia, "Plateia Fallback", Arial, sans-serif;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -2975,7 +2985,7 @@ img {
 }
 
 .hero_heading {
-  font-family: Plateia, Arial, sans-serif;
+  font-family: Plateia, "Plateia Fallback", Arial, sans-serif;
   font-size: 70px;
   line-height: 1.05;
   font-weight: 400;
@@ -3329,7 +3339,7 @@ select.input-field {
   text-transform: none;
   width: auto;
   font-style: normal;
-  font-family: 'Clash Display', sans-serif;
+  font-family: "Onest Variablefont Wght", Arial, sans-serif;
 }
 
 /* === WhatsApp Action Button === */
@@ -3345,7 +3355,7 @@ select.input-field {
   color: #fff;
   font-size: 13.5px;
   font-weight: 700;
-  font-family: Onest, Arial, sans-serif;
+  font-family: "Onest Variablefont Wght", Arial, sans-serif;
   letter-spacing: 0.3px;
   text-decoration: none;
   border-radius: 11px;
@@ -3377,7 +3387,7 @@ select.input-field {
   gap: 6px 14px;
   margin: 0 0 28px;
   font-size: 12px;
-  font-family: Onest, Arial, sans-serif;
+  font-family: "Onest Variablefont Wght", Arial, sans-serif;
   color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.4px;
 }
@@ -3392,7 +3402,7 @@ select.input-field {
 .footer_info {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.4);
-  font-family: Onest, Arial, sans-serif;
+  font-family: "Onest Variablefont Wght", Arial, sans-serif;
   letter-spacing: 0.2px;
   margin-bottom: 6px;
 }
@@ -3448,7 +3458,7 @@ select.input-field {
   font-size: 13px;
   font-weight: 700;
   color: #0d1526;
-  font-family: Onest, Arial, sans-serif;
+  font-family: "Onest Variablefont Wght", Arial, sans-serif;
   margin-bottom: 2px;
 }
 
@@ -3456,7 +3466,7 @@ select.input-field {
   display: block;
   font-size: 11px;
   color: #64748b;
-  font-family: Onest, Arial, sans-serif;
+  font-family: "Onest Variablefont Wght", Arial, sans-serif;
   line-height: 1.4;
 }
 
@@ -3525,7 +3535,7 @@ select.input-field {
 .testimonial_text {
   flex: 1;
   margin: 0;
-  font-family: Onest, Arial, sans-serif;
+  font-family: "Onest Variablefont Wght", Arial, sans-serif;
   font-size: 15px;
   line-height: 1.6;
   color: #0d1526;
@@ -3538,14 +3548,14 @@ select.input-field {
 }
 
 .testimonial_author strong {
-  font-family: 'Clash Display', sans-serif;
+  font-family: "Onest Variablefont Wght", Arial, sans-serif;
   font-size: 15px;
   font-weight: 700;
   color: #0d1526;
 }
 
 .testimonial_author span {
-  font-family: Onest, Arial, sans-serif;
+  font-family: "Onest Variablefont Wght", Arial, sans-serif;
   font-size: 12px;
   color: #64748b;
 }
@@ -3576,7 +3586,7 @@ select.input-field {
 }
 
 .how-to-order_tag {
-  font-family: Plateia, Arial, sans-serif;
+  font-family: Plateia, "Plateia Fallback", Arial, sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -3587,7 +3597,7 @@ select.input-field {
 }
 
 .how-to-order_heading {
-  font-family: Plateia, Arial, sans-serif;
+  font-family: Plateia, "Plateia Fallback", Arial, sans-serif;
   font-size: 22px;
   font-weight: 700;
   color: var(--black);
@@ -3617,21 +3627,21 @@ select.input-field {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Clash Display', sans-serif;
+  font-family: "Onest Variablefont Wght", Arial, sans-serif;
   font-size: 13px;
   font-weight: 700;
   flex-shrink: 0;
 }
 
 .how-to-order_step strong {
-  font-family: Onest, Arial, sans-serif;
+  font-family: "Onest Variablefont Wght", Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: var(--black);
 }
 
 .how-to-order_step span {
-  font-family: Onest, Arial, sans-serif;
+  font-family: "Onest Variablefont Wght", Arial, sans-serif;
   font-size: 13px;
   color: #64748b;
   line-height: 1.55;
@@ -3639,7 +3649,7 @@ select.input-field {
 
 .how-to-order_note {
   margin: 2rem 0 0;
-  font-family: Onest, Arial, sans-serif;
+  font-family: "Onest Variablefont Wght", Arial, sans-serif;
   font-size: 13px;
   color: #64748b;
 }
@@ -3647,7 +3657,7 @@ select.input-field {
 /* === WHATSAPP REASSURANCE === */
 .product_wa-reassurance {
   margin: 5px 0 0;
-  font-family: Onest, Arial, sans-serif;
+  font-family: "Onest Variablefont Wght", Arial, sans-serif;
   font-size: 11px;
   color: #64748b;
   text-align: center;

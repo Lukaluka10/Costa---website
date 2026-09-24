@@ -24,10 +24,10 @@
 .cp-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .cp-thumb[aria-current="true"] { border-color: var(--cp-blue); }
 
-.cp-tag { font-family: Plateia, Arial, sans-serif; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--cp-blue); display: inline-block; margin-bottom: .9rem; }
-.cp-title { font-family: Plateia, Arial, sans-serif; text-transform: uppercase; font-size: 38px; line-height: 1.15; margin: 0 0 1rem; color: #fff; }
+.cp-tag { font-family: Plateia, "Plateia Fallback", Arial, sans-serif; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--cp-blue); display: inline-block; margin-bottom: .9rem; }
+.cp-title { font-family: Plateia, "Plateia Fallback", Arial, sans-serif; text-transform: uppercase; font-size: 38px; line-height: 1.15; margin: 0 0 1rem; color: #fff; }
 .cp-lead { color: #cbd5e1; font-size: 16px; line-height: 1.6; margin: 0 0 1.5rem; }
-.cp-price { font-family: 'Clash Display', Onest, sans-serif; font-weight: 600; font-size: 40px; line-height: 1; margin: 0 0 .4rem; color: #fff; }
+.cp-price { font-family: "Onest Variablefont Wght", Arial, sans-serif; font-weight: 600; font-size: 40px; line-height: 1; margin: 0 0 .4rem; color: #fff; }
 .cp-price-note { color: #94a3b8; font-size: 13px; margin: 0 0 1.5rem; }
 
 .cp-checks { list-style: none; padding: 0; margin: 0 0 1.75rem; display: grid; gap: .6rem; }
@@ -52,7 +52,7 @@
 /* ---------- Svijetli dio ---------- */
 .cp-section { background: #fff; color: var(--cp-ink); padding: 4.5rem 0; }
 .cp-section.is-soft { background: var(--cp-soft); border-top: 1px solid var(--cp-line); border-bottom: 1px solid var(--cp-line); }
-.cp-h2 { font-family: Plateia, Arial, sans-serif; text-transform: uppercase; font-size: 26px; line-height: 1.2; margin: 0 0 1.5rem; color: var(--cp-ink); }
+.cp-h2 { font-family: Plateia, "Plateia Fallback", Arial, sans-serif; text-transform: uppercase; font-size: 26px; line-height: 1.2; margin: 0 0 1.5rem; color: var(--cp-ink); }
 .cp-grid-2 { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 3rem; align-items: start; }
 
 .cp-specs { width: 100%; border-collapse: collapse; font-size: 15px; }
@@ -90,7 +90,7 @@
 .cp-items { display: grid; gap: 1.25rem; }
 .cp-item { display: grid; grid-template-columns: 220px minmax(0, 1fr) 220px; gap: 1.5rem; align-items: center; border: 1px solid var(--cp-line); border-radius: 18px; padding: 1.1rem; background: #fff; scroll-margin-top: 6rem; }
 .cp-item img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; display: block; }
-.cp-item h2 { font-size: 20px; margin: 0 0 .35rem; color: var(--cp-ink); font-family: Onest, Arial, sans-serif; }
+.cp-item h2 { font-size: 20px; margin: 0 0 .35rem; color: var(--cp-ink); font-family: "Onest Variablefont Wght", Arial, sans-serif; }
 .cp-item .cp-dim { color: var(--cp-muted); font-size: 12px; letter-spacing: .8px; text-transform: uppercase; margin: 0 0 .6rem; }
 .cp-item ul { margin: 0; padding-left: 1.1rem; color: #475569; font-size: 14.5px; line-height: 1.6; }
 .cp-item .cp-buy { text-align: center; }
@@ -99,7 +99,7 @@
 
 .cp-banner { display: flex; gap: 1.5rem; align-items: center; justify-content: space-between; border-radius: 18px; padding: 1.5rem 1.75rem; background: #000; color: #fff; margin-top: 2rem; }
 .cp-banner p { margin: .3rem 0 0; color: #cbd5e1; font-size: 15px; line-height: 1.55; }
-.cp-banner h2 { font-family: Plateia, Arial, sans-serif; text-transform: uppercase; font-size: 20px; margin: 0; color: #fff; }
+.cp-banner h2 { font-family: Plateia, "Plateia Fallback", Arial, sans-serif; text-transform: uppercase; font-size: 20px; margin: 0; color: #fff; }
 .cp-banner .button { flex: none; color: #fff; text-decoration: none; }
 
 /* Forma na stranici za klubove */
@@ -112,7 +112,7 @@
 
 /* Pravne stranice */
 .cp-legal { max-width: 50rem; }
-.cp-legal h2 { font-size: 20px; margin: 2rem 0 .6rem; color: var(--cp-ink); font-family: Onest, Arial, sans-serif; }
+.cp-legal h2 { font-size: 20px; margin: 2rem 0 .6rem; color: var(--cp-ink); font-family: "Onest Variablefont Wght", Arial, sans-serif; }
 .cp-legal p, .cp-legal li { color: #334155; font-size: 15.5px; line-height: 1.7; }
 .cp-legal .cp-updated { color: var(--cp-muted); font-size: 13px; }
 
@@ -152,7 +152,7 @@
     padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom)); background: rgba(0, 0, 0, .94); border-top: 1px solid #1f2937;
     transform: translateY(110%); transition: transform .25s ease; }
   .cp-sticky.is-visible { transform: none; }
-  .cp-sticky .cp-sticky-price { color: #fff; font-family: 'Clash Display', Onest, sans-serif; font-weight: 600; font-size: 20px; white-space: nowrap; }
+  .cp-sticky .cp-sticky-price { color: #fff; font-family: "Onest Variablefont Wght", Arial, sans-serif; font-weight: 600; font-size: 20px; white-space: nowrap; }
   .cp-sticky .product_wa-btn { flex: 1; padding: 12px 14px; }
   .cp-page.sticky-on .whatsapp-float { display: none; }
   .cp-page.has-sticky .footer { padding-bottom: 4.5rem; }
@@ -177,7 +177,7 @@
 .product_card.bg-1 { background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.75)), url("../images/proizvodi/proizvodi%20limfna.jpeg"); background-size: auto, cover; }
 .product_card.bg-2 { background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.75)), url("../images/proizvodi/Pistolj%20za%20masa%C5%BEu.webp"); background-size: auto, cover; }
 .product-card_button::after { content: ""; position: absolute; inset: 0; border-radius: 20px; }
-.cp-card-price { display: block; margin-top: .45rem; font-family: Onest, Arial, sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0; text-transform: none; color: #e2e8f0; }
+.cp-card-price { display: block; margin-top: .45rem; font-family: "Onest Variablefont Wght", Arial, sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0; text-transform: none; color: #e2e8f0; }
 
 /* === Početna: čitljiviji tekst preko naslovne fotografije === */
 .hero-description { text-shadow: 0 1px 14px rgba(0, 0, 0, .65); }
@@ -185,3 +185,78 @@
 /* === Početna: sekcija za klubove i česta pitanja === */
 .cp-home-faq .cp-faq { margin: 0 auto; }
 .cp-home-faq .cp-h2 { text-align: center; }
+
+/* ==========================================================================
+   Brzina i mobilni meni (bez Webflow skripti)
+   ========================================================================== */
+
+/* Optimizovane slike (umjesto originala od 400–600 KB) */
+.section_hero { background-image: url("../images/opt/hero-1600.webp"); }
+.product_card.bg-1 { background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.75)), url("../images/opt/limfna-600.webp"); }
+.product_card.bg-2 { background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.75)), url("../images/opt/pistolj-600.webp"); }
+.product_card.bg-4 { background-image: linear-gradient(#0000, #000000b3), url("../images/opt/tejp-kartica-900.webp"); background-size: auto, cover; }
+@media screen and (max-width: 767px) {
+  .section_hero { background-image: url("../images/opt/hero-800.webp"); }
+}
+
+/* Strelica na kartici proizvoda (ranije Webflow animacija) */
+.card_icon { transition: transform .3s ease; }
+.product_card:hover .card_icon { transform: rotate(45deg); }
+
+/* Dugme za meni */
+.cp-burger { display: none; }
+@media screen and (max-width: 767px) {
+  .cp-burger { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px;
+    width: 44px; height: 44px; padding: 0; margin-right: -6px; background: transparent; border: 0; cursor: pointer;
+    position: relative; z-index: 400; -webkit-tap-highlight-color: transparent; }
+  .cp-burger span { display: block; width: 28px; height: 2.5px; border-radius: 2px; background: #fff; transition: transform .3s ease, opacity .2s ease; }
+  body.nav-open .cp-burger span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
+  body.nav-open .cp-burger span:nth-child(2) { opacity: 0; }
+  body.nav-open .cp-burger span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
+
+  .nav_list { transition: transform .32s cubic-bezier(.2, .8, .2, 1), visibility 0s linear .32s; visibility: hidden; }
+  body.nav-open .nav_list { transform: translateX(100%); visibility: visible; transition-delay: 0s; }
+  body.nav-open { overflow: hidden; }
+  body.nav-open .whatsapp-float, body.nav-open .cp-sticky { display: none; }
+
+  .nav_list .nav-links { display: flex; flex-direction: column; align-items: center; gap: .35rem; margin: 0; }
+  .nav_list .nav_link { font-size: 24px; font-weight: 600; padding: 10px 18px; }
+  .nav_list .nav_link.w--current { width: auto; color: var(--color-primary); }
+  .nav_list .button { display: inline-block !important; margin-top: 1.25rem; }
+}
+
+/* ==========================================================================
+   Čitljivost i pristupačnost
+   ========================================================================== */
+.product_description { color: #64748b; font-size: 12px; }
+.product_wa-reassurance, .cp-cta-sub { font-size: 12.5px; }
+.footer_info a { text-decoration: underline; text-underline-offset: 2px; }
+@media screen and (max-width: 767px) {
+  .product_image-wrap { aspect-ratio: 16 / 10; height: auto; }
+}
+
+/* ==========================================================================
+   Početna: dugmad u naslovnom dijelu
+   ========================================================================== */
+.cp-hero-ctas { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
+.cp-hero-ctas .button { color: #fff; text-decoration: none; }
+.button.cp-btn-ghost { background: rgba(255, 255, 255, .08); border: 1.5px solid rgba(255, 255, 255, .55); }
+.button.cp-btn-ghost:hover { background: rgba(255, 255, 255, .16); box-shadow: none; }
+@media screen and (max-width: 479px) {
+  .cp-hero-ctas { flex-direction: column; align-items: stretch; width: 100%; max-width: 340px; margin: 0 auto; }
+  .cp-hero-ctas .button { text-align: center; }
+}
+
+/* Kontrast manjih tekstova (WCAG AA) */
+.footer_info { color: rgba(255, 255, 255, .68); }
+.footer_info a { color: rgba(255, 255, 255, .8); }
+.how-to-order_tag { color: #0077b6; }
+.product_details-link { color: #0077b6; }
+.cp-visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* Traka "Oprema koja pravi razliku" ne smije praviti horizontalni skrol */
+html, body { overflow-x: clip; }
+
+/* Početna: razmak između kose trake i sekcije Proizvodi (sekcije su promijenile redoslijed) */
+.section_marqee + .section_products .padding-global { padding-top: 9rem; }
+@media screen and (max-width: 767px) { .section_marqee + .section_products .padding-global { padding-top: 7rem; } }

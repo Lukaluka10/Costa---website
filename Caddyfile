@@ -7,11 +7,28 @@
 :{$PORT:8080} {
 	root * /srv
 	encode zstd gzip
+
+	# Linkovi bez ".html" (npr. /proizvodi) otvaraju odgovarajuću stranicu
+	try_files {path} {path}.html
 	file_server
 
-	@html path *.html /
+	# Nepostojeća stranica -> naša 404 stranica umjesto prazne bijele
+	handle_errors {
+		@notfound expression {err.status_code} == 404
+		handle @notfound {
+			rewrite * /404.html
+			file_server {
+				status 404
+			}
+		}
+	}
+
+	@html path_regexp ^(/[^.]*|.*\.html)$
 	header @html Cache-Control "public, max-age=0, must-revalidate"
 
-	@static path *.webp *.png *.jpg *.jpeg *.svg *.ttf *.woff2 *.js *.css
+	@static path *.webp *.png *.jpg *.jpeg *.svg *.js *.css
 	header @static Cache-Control "public, max-age=86400"
+
+	@fonts path *.woff2 *.ttf
+	header @fonts Cache-Control "public, max-age=2592000, immutable"
 }

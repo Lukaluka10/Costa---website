@@ -1,5 +1,23 @@
 /* Costa Pro — galerija na stranici proizvoda i ljepljivo dugme za narudžbu na mobitelu. */
 (function () {
+  // Mobilni meni (zamjena za Webflow skripte)
+  var burger = document.querySelector('.cp-burger');
+  if (burger) {
+    var setOpen = function (open) {
+      document.body.classList.toggle('nav-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? 'Zatvori meni' : 'Otvori meni');
+    };
+    burger.addEventListener('click', function () { setOpen(!document.body.classList.contains('nav-open')); });
+    document.querySelectorAll('.nav_list a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+    if (window.matchMedia) {
+      var mq = window.matchMedia('(min-width: 768px)');
+      var onChange = function (e) { if (e.matches) setOpen(false); };
+      if (mq.addEventListener) mq.addEventListener('change', onChange); else if (mq.addListener) mq.addListener(onChange);
+    }
+  }
+
   // Galerija: klik na sličicu mijenja glavnu sliku
   document.querySelectorAll('[data-cp-gallery]').forEach(function (g) {
     var main = g.querySelector('.cp-gallery-main img');
