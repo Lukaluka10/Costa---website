@@ -1,0 +1,165 @@
+/* ==========================================================================
+   Costa Pro — stranice proizvoda, stranica za klubove i pravne stranice.
+   Dopuna za css/style.css (Webflow). Sve klase počinju sa "cp-".
+   ========================================================================== */
+
+.cp-page { --cp-blue: #00b2ff; --cp-ink: #0d1526; --cp-muted: #64748b; --cp-line: #eaecf0; --cp-soft: #f8fafc; }
+
+.cp-container { max-width: 76rem; margin: 0 auto; padding: 0 5vw; text-align: left; }
+
+/* ---------- Tamni gornji dio ---------- */
+.cp-hero { background: #000; color: #fff; padding: 1.5rem 0 4.5rem; }
+.cp-crumbs { font-size: 13px; color: #94a3b8; margin-bottom: 1.75rem; }
+.cp-crumbs a { color: #94a3b8; text-decoration: none; }
+.cp-crumbs a:hover { color: #fff; }
+.cp-crumbs span { margin: 0 .4rem; }
+
+.cp-product { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 3.5rem; align-items: start; }
+
+.cp-gallery-main { background: #0b0b0b; border: 1px solid #1f2937; border-radius: 18px; overflow: hidden; aspect-ratio: 1 / 1; }
+.cp-gallery-main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cp-gallery-main.is-contain img { object-fit: contain; background: #fff; }
+.cp-thumbs { display: flex; gap: .75rem; margin-top: .9rem; }
+.cp-thumb { width: 76px; height: 76px; padding: 0; border: 2px solid #1f2937; border-radius: 12px; overflow: hidden; background: #fff; cursor: pointer; }
+.cp-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cp-thumb[aria-current="true"] { border-color: var(--cp-blue); }
+
+.cp-tag { font-family: Plateia, Arial, sans-serif; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--cp-blue); display: inline-block; margin-bottom: .9rem; }
+.cp-title { font-family: Plateia, Arial, sans-serif; text-transform: uppercase; font-size: 38px; line-height: 1.15; margin: 0 0 1rem; color: #fff; }
+.cp-lead { color: #cbd5e1; font-size: 16px; line-height: 1.6; margin: 0 0 1.5rem; }
+.cp-price { font-family: 'Clash Display', Onest, sans-serif; font-weight: 600; font-size: 40px; line-height: 1; margin: 0 0 .4rem; color: #fff; }
+.cp-price-note { color: #94a3b8; font-size: 13px; margin: 0 0 1.5rem; }
+
+.cp-checks { list-style: none; padding: 0; margin: 0 0 1.75rem; display: grid; gap: .6rem; }
+.cp-checks li { position: relative; padding-left: 1.75rem; color: #e2e8f0; font-size: 15px; line-height: 1.5; }
+.cp-checks li::before { content: ""; position: absolute; left: 0; top: .3em; width: 1.05rem; height: 1.05rem; border-radius: 50%;
+  background: var(--cp-blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.2 4.2L19 7'/%3E%3C/svg%3E") center / 70% no-repeat; }
+
+.cp-note-box { border: 1px solid #1f2937; background: #0b1220; border-radius: 14px; padding: 1rem 1.1rem; margin: 0 0 1.5rem; font-size: 14px; color: #cbd5e1; line-height: 1.55; }
+.cp-note-box strong { color: #fff; }
+.cp-sizes { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; margin-top: .7rem; }
+.cp-size { border: 1px solid #334155; border-radius: 10px; padding: .6rem .75rem; }
+.cp-size b { display: block; color: #fff; font-size: 15px; }
+.cp-size span { color: #94a3b8; font-size: 13px; }
+
+.cp-cta.product_wa-btn { font-size: 16px; padding: 17px 20px; border-radius: 12px; }
+.cp-cta-sub { text-align: center; color: #94a3b8; font-size: 12.5px; margin: .6rem 0 1.5rem; }
+
+.cp-trust { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; }
+.cp-trust div { border: 1px solid #1f2937; border-radius: 12px; padding: .75rem; font-size: 12.5px; color: #94a3b8; line-height: 1.4; }
+.cp-trust b { display: block; color: #fff; font-size: 13.5px; margin-bottom: .15rem; }
+
+/* ---------- Svijetli dio ---------- */
+.cp-section { background: #fff; color: var(--cp-ink); padding: 4.5rem 0; }
+.cp-section.is-soft { background: var(--cp-soft); border-top: 1px solid var(--cp-line); border-bottom: 1px solid var(--cp-line); }
+.cp-h2 { font-family: Plateia, Arial, sans-serif; text-transform: uppercase; font-size: 26px; line-height: 1.2; margin: 0 0 1.5rem; color: var(--cp-ink); }
+.cp-grid-2 { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 3rem; align-items: start; }
+
+.cp-specs { width: 100%; border-collapse: collapse; font-size: 15px; }
+.cp-specs th, .cp-specs td { text-align: left; vertical-align: top; padding: .8rem .9rem; border-bottom: 1px solid var(--cp-line); line-height: 1.5; }
+.cp-specs th { width: 34%; color: var(--cp-muted); font-weight: 600; }
+.cp-specs tr:first-child th, .cp-specs tr:first-child td { border-top: 1px solid var(--cp-line); }
+
+.cp-card { border: 1px solid var(--cp-line); border-radius: 16px; padding: 1.4rem 1.5rem; background: #fff; }
+.cp-card h3 { font-size: 17px; margin: 0 0 .6rem; color: var(--cp-ink); }
+.cp-card p, .cp-card li { color: #475569; font-size: 15px; line-height: 1.6; }
+.cp-card ul { margin: 0; padding-left: 1.1rem; }
+.cp-card + .cp-card { margin-top: 1rem; }
+.cp-small { color: var(--cp-muted); font-size: 13px; line-height: 1.55; }
+
+/* FAQ */
+.cp-faq { max-width: 52rem; }
+.cp-faq details { border-bottom: 1px solid var(--cp-line); }
+.cp-faq details:first-of-type { border-top: 1px solid var(--cp-line); }
+.cp-faq summary { cursor: pointer; list-style: none; padding: 1.1rem 2.5rem 1.1rem 0; font-weight: 600; font-size: 16px; color: var(--cp-ink); position: relative; }
+.cp-faq summary::-webkit-details-marker { display: none; }
+.cp-faq summary::after { content: "+"; position: absolute; right: .25rem; top: 50%; transform: translateY(-50%); font-size: 22px; color: var(--cp-blue); font-weight: 400; }
+.cp-faq details[open] summary::after { content: "–"; }
+.cp-faq details p { margin: 0 0 1.1rem; color: #475569; font-size: 15px; line-height: 1.65; }
+
+/* Povezani proizvodi */
+.cp-related { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.cp-related a { display: block; border: 1px solid var(--cp-line); border-radius: 16px; overflow: hidden; text-decoration: none; color: var(--cp-ink); background: #fff; transition: box-shadow .2s ease, transform .2s ease; }
+.cp-related a:hover { box-shadow: 0 10px 30px rgba(13, 21, 38, .08); transform: translateY(-2px); }
+.cp-related img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background: #f1f5f9; }
+.cp-related div { padding: .9rem 1rem 1.1rem; }
+.cp-related b { display: block; font-size: 15px; }
+.cp-related span { color: var(--cp-muted); font-size: 14px; }
+
+/* Lista tejpova */
+.cp-items { display: grid; gap: 1.25rem; }
+.cp-item { display: grid; grid-template-columns: 220px minmax(0, 1fr) 220px; gap: 1.5rem; align-items: center; border: 1px solid var(--cp-line); border-radius: 18px; padding: 1.1rem; background: #fff; scroll-margin-top: 6rem; }
+.cp-item img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; display: block; }
+.cp-item h2 { font-size: 20px; margin: 0 0 .35rem; color: var(--cp-ink); font-family: Onest, Arial, sans-serif; }
+.cp-item .cp-dim { color: var(--cp-muted); font-size: 12px; letter-spacing: .8px; text-transform: uppercase; margin: 0 0 .6rem; }
+.cp-item ul { margin: 0; padding-left: 1.1rem; color: #475569; font-size: 14.5px; line-height: 1.6; }
+.cp-item .cp-buy { text-align: center; }
+.cp-item .cp-buy .product_price { border-top: 0; margin: 0 0 .75rem; padding: 0; font-size: 26px; }
+.cp-item .cp-club { color: var(--cp-muted); font-size: 12.5px; margin: .55rem 0 0; }
+
+.cp-banner { display: flex; gap: 1.5rem; align-items: center; justify-content: space-between; border-radius: 18px; padding: 1.5rem 1.75rem; background: #000; color: #fff; margin-top: 2rem; }
+.cp-banner p { margin: .3rem 0 0; color: #cbd5e1; font-size: 15px; line-height: 1.55; }
+.cp-banner h2 { font-family: Plateia, Arial, sans-serif; text-transform: uppercase; font-size: 20px; margin: 0; color: #fff; }
+.cp-banner .button { flex: none; color: #fff; text-decoration: none; }
+
+/* Forma na stranici za klubove */
+.cp-form { display: grid; gap: .9rem; }
+.cp-form label { display: block; font-size: 13px; font-weight: 600; color: var(--cp-ink); margin-bottom: .3rem; }
+.cp-form input, .cp-form textarea, .cp-form select { width: 100%; box-sizing: border-box; border: 1px solid #cbd5e1; border-radius: 10px; padding: .75rem .85rem; font: inherit; font-size: 15px; color: var(--cp-ink); background: #fff; }
+.cp-form textarea { min-height: 120px; resize: vertical; }
+.cp-form .cp-row { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+.cp-form button { border: 0; cursor: pointer; }
+
+/* Pravne stranice */
+.cp-legal { max-width: 50rem; }
+.cp-legal h2 { font-size: 20px; margin: 2rem 0 .6rem; color: var(--cp-ink); font-family: Onest, Arial, sans-serif; }
+.cp-legal p, .cp-legal li { color: #334155; font-size: 15.5px; line-height: 1.7; }
+.cp-legal .cp-updated { color: var(--cp-muted); font-size: 13px; }
+
+/* Linkovi na pravne stranice u footeru */
+.cp-footer-legal { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1.1rem; font-size: 13px; margin-top: .25rem; }
+.cp-footer-legal a { color: inherit; opacity: .75; text-decoration: none; }
+.cp-footer-legal a:hover { opacity: 1; text-decoration: underline; }
+
+/* Kartice na stranici Proizvodi: link na detalje */
+.product_details-link { display: inline-block; margin: 0 0 8px; font-size: 13px; font-weight: 600; color: #00a3eb; text-decoration: none; text-align: left; }
+.product_details-link:hover { text-decoration: underline; }
+.product_image-link { display: block; }
+
+/* Ljepljivo dugme na dnu ekrana (mobitel) */
+.cp-sticky { display: none; }
+
+@media screen and (max-width: 991px) {
+  .cp-product, .cp-grid-2 { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .cp-item { grid-template-columns: 140px minmax(0, 1fr); }
+  .cp-item .cp-buy { grid-column: 1 / -1; }
+  .cp-related { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media screen and (max-width: 767px) {
+  .cp-hero { padding-bottom: 3rem; }
+  .cp-title { font-size: 27px; }
+  .cp-price { font-size: 34px; }
+  .cp-trust { grid-template-columns: minmax(0, 1fr); }
+  .cp-section { padding: 3rem 0; }
+  .cp-h2 { font-size: 21px; }
+  .cp-specs th { width: 42%; }
+  .cp-banner { flex-direction: column; align-items: flex-start; }
+  .cp-form .cp-row { grid-template-columns: minmax(0, 1fr); }
+  .cp-related { grid-template-columns: minmax(0, 1fr); }
+
+  .cp-sticky { display: flex; align-items: center; gap: .9rem; position: fixed; left: 0; right: 0; bottom: 0; z-index: 1200;
+    padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom)); background: rgba(0, 0, 0, .94); border-top: 1px solid #1f2937;
+    transform: translateY(110%); transition: transform .25s ease; }
+  .cp-sticky.is-visible { transform: none; }
+  .cp-sticky .cp-sticky-price { color: #fff; font-family: 'Clash Display', Onest, sans-serif; font-weight: 600; font-size: 20px; white-space: nowrap; }
+  .cp-sticky .product_wa-btn { flex: 1; padding: 12px 14px; }
+  .cp-page.sticky-on .whatsapp-float { display: none; }
+  .cp-page.has-sticky .footer { padding-bottom: 4.5rem; }
+}
+
+@media screen and (max-width: 479px) {
+  .cp-item { grid-template-columns: minmax(0, 1fr); }
+  .cp-item img { aspect-ratio: 16 / 10; }
+  .cp-thumb { width: 64px; height: 64px; }
+}
