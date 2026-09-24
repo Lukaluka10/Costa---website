@@ -3,7 +3,7 @@
    Dopuna za css/style.css (Webflow). Sve klase počinju sa "cp-".
    ========================================================================== */
 
-.cp-page { --cp-blue: #00b2ff; --cp-ink: #0d1526; --cp-muted: #64748b; --cp-line: #eaecf0; --cp-soft: #f8fafc; }
+:root { --cp-blue: #00b2ff; --cp-ink: #0d1526; --cp-muted: #64748b; --cp-line: #eaecf0; --cp-soft: #f8fafc; }
 
 .cp-container { max-width: 76rem; margin: 0 auto; padding: 0 5vw; text-align: left; }
 
@@ -171,3 +171,17 @@
 .cp-submit { display: flex; width: 100%; justify-content: center; align-items: center; padding: 16px 20px; border-radius: 12px;
   background: #0d1526; color: #fff; font-weight: 700; font-size: 15px; letter-spacing: .3px; transition: background-color .2s ease, transform .2s ease; }
 .cp-submit:hover { background: #1e293b; transform: translateY(-1px); }
+
+/* === Početna: kartice proizvoda sa stvarnim fotografijama, cijenom i klikom na cijelu karticu === */
+.product_card { position: relative; }
+.product_card.bg-1 { background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.75)), url("../images/proizvodi/proizvodi%20limfna.jpeg"); background-size: auto, cover; }
+.product_card.bg-2 { background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.75)), url("../images/proizvodi/Pistolj%20za%20masa%C5%BEu.webp"); background-size: auto, cover; }
+.product-card_button::after { content: ""; position: absolute; inset: 0; border-radius: 20px; }
+.cp-card-price { display: block; margin-top: .45rem; font-family: Onest, Arial, sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0; text-transform: none; color: #e2e8f0; }
+
+/* === Početna: čitljiviji tekst preko naslovne fotografije === */
+.hero-description { text-shadow: 0 1px 14px rgba(0, 0, 0, .65); }
+
+/* === Početna: sekcija za klubove i česta pitanja === */
+.cp-home-faq .cp-faq { margin: 0 auto; }
+.cp-home-faq .cp-h2 { text-align: center; }
