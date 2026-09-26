@@ -12,7 +12,7 @@
     document.querySelectorAll('.nav_list a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
     if (window.matchMedia) {
-      var mq = window.matchMedia('(min-width: 768px)');
+      var mq = window.matchMedia('(min-width: 992px)');
       var onChange = function (e) { if (e.matches) setOpen(false); };
       if (mq.addEventListener) mq.addEventListener('change', onChange); else if (mq.addListener) mq.addListener(onChange);
     }

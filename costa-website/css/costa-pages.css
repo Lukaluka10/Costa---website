@@ -25,7 +25,7 @@
 .cp-thumb[aria-current="true"] { border-color: var(--cp-blue); }
 
 .cp-tag { font-family: Plateia, "Plateia Fallback", Arial, sans-serif; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--cp-blue); display: inline-block; margin-bottom: .9rem; }
-.cp-title { font-family: Plateia, "Plateia Fallback", Arial, sans-serif; text-transform: uppercase; font-size: 38px; line-height: 1.15; margin: 0 0 1rem; color: #fff; }
+.cp-title { font-family: Plateia, "Plateia Fallback", Arial, sans-serif; text-transform: uppercase; font-size: 34px; line-height: 1.15; margin: 0 0 1rem; color: #fff; }
 .cp-lead { color: #cbd5e1; font-size: 16px; line-height: 1.6; margin: 0 0 1.5rem; }
 .cp-price { font-family: "Onest Variablefont Wght", Arial, sans-serif; font-weight: 600; font-size: 40px; line-height: 1; margin: 0 0 .4rem; color: #fff; }
 .cp-price-note { color: #94a3b8; font-size: 13px; margin: 0 0 1.5rem; }
@@ -164,18 +164,19 @@
   .cp-thumb { width: 64px; height: 64px; }
 }
 
-/* Footer ima margin-top: -150px (kosi rub) — ostavi mjesta da ne prekrije sadržaj */
-.cp-page .main-wrapper { padding-bottom: 150px; }
+/* Footer na desktopu ima margin-top: -150px (kosi rub) — ostavi mjesta da ne prekrije sadržaj.
+   Na tabletu i mobitelu footer nema negativnu marginu, pa nema ni razmaka. */
+@media screen and (min-width: 992px) { .cp-page .main-wrapper { padding-bottom: 150px; } }
+.cp-dark-end .main-wrapper { background: #000; }
 
 /* Dugme za slanje forme (bez WhatsApp ikone) */
 .cp-submit { display: flex; width: 100%; justify-content: center; align-items: center; padding: 16px 20px; border-radius: 12px;
-  background: #0d1526; color: #fff; font-weight: 700; font-size: 15px; letter-spacing: .3px; transition: background-color .2s ease, transform .2s ease; }
-.cp-submit:hover { background: #1e293b; transform: translateY(-1px); }
+  background: var(--cp-blue); color: #fff; font-weight: 700; font-size: 15px; letter-spacing: .3px; transition: background-color .2s ease, transform .2s ease; }
+.cp-submit:hover { background: #009ee6; transform: translateY(-1px); }
 
 /* === Početna: kartice proizvoda sa stvarnim fotografijama, cijenom i klikom na cijelu karticu === */
 .product_card { position: relative; }
-.product_card.bg-1 { background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.75)), url("../images/proizvodi/proizvodi%20limfna.jpeg"); background-size: auto, cover; }
-.product_card.bg-2 { background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.75)), url("../images/proizvodi/Pistolj%20za%20masa%C5%BEu.webp"); background-size: auto, cover; }
+.product_card.bg-1, .product_card.bg-2 { background-size: auto, cover; }
 .product-card_button::after { content: ""; position: absolute; inset: 0; border-radius: 20px; }
 .cp-card-price { display: block; margin-top: .45rem; font-family: "Onest Variablefont Wght", Arial, sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0; text-transform: none; color: #e2e8f0; }
 
@@ -203,9 +204,14 @@
 .card_icon { transition: transform .3s ease; }
 .product_card:hover .card_icon { transform: rotate(45deg); }
 
-/* Dugme za meni */
+/* Dugme za meni (mobitel i tablet, do 991 px) */
 .cp-burger { display: none; }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar_content { justify-content: space-between; }
+  .brand { z-index: 4; position: relative; }
+  .nav_list { z-index: 300; gap: 1rem; background-color: #000; flex-flow: column; justify-content: center; align-items: center; position: fixed; inset: 0 0 0 -100%; }
+}
+@media screen and (max-width: 991px) {
   .cp-burger { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px;
     width: 44px; height: 44px; padding: 0; margin-right: -6px; background: transparent; border: 0; cursor: pointer;
     position: relative; z-index: 400; -webkit-tap-highlight-color: transparent; }
@@ -217,6 +223,7 @@
   .nav_list { transition: transform .32s cubic-bezier(.2, .8, .2, 1), visibility 0s linear .32s; visibility: hidden; }
   body.nav-open .nav_list { transform: translateX(100%); visibility: visible; transition-delay: 0s; }
   body.nav-open { overflow: hidden; }
+  body.nav-open .brand { z-index: 350; }
   body.nav-open .whatsapp-float, body.nav-open .cp-sticky { display: none; }
 
   .nav_list .nav-links { display: flex; flex-direction: column; align-items: center; gap: .35rem; margin: 0; }
@@ -260,3 +267,43 @@ html, body { overflow-x: clip; }
 /* Početna: razmak između kose trake i sekcije Proizvodi (sekcije su promijenile redoslijed) */
 .section_marqee + .section_products .padding-global { padding-top: 9rem; }
 @media screen and (max-width: 767px) { .section_marqee + .section_products .padding-global { padding-top: 7rem; } }
+
+/* ==========================================================================
+   Završno poliranje (26.09.)
+   ========================================================================== */
+
+/* Linkovi u tekstu: boja brenda umjesto zadane plave iz preglednika */
+.cp-legal a, .cp-club a, .cp-small a, .cp-faq a { color: #0077b6; text-decoration: underline; text-underline-offset: 2px; }
+.cp-legal a:hover, .cp-club a:hover, .cp-small a:hover, .cp-faq a:hover { color: #005a8c; }
+
+/* Brojevi u koracima "Kako naručiti": tamni broj na plavom krugu (bijeli se nije vidio) */
+.how-to-order_step .how-to-order_num { color: #000; font-weight: 700; }
+
+/* Stranica Proizvodi: kratki opis poravnat kao naslov i cijena */
+.product_benefit { text-align: left; }
+
+/* Početna: sekcija O nama dolazi odmah poslije kartica, bez prazne rupe */
+.section_testimonials + .section_about .padding_about { padding-top: 3rem; }
+@media screen and (max-width: 767px) {
+  .section_testimonials + .section_about .padding_about { padding-top: 2rem; }
+}
+
+/* Naslovni dio na tabletu i mobitelu: prednosti u urednim redovima, bez razdjelnika koji vise */
+@media screen and (max-width: 991px) {
+  .hero-tags_list { flex-flow: wrap; justify-content: center; align-items: center; gap: 12px 22px; max-width: 440px; margin-left: auto; margin-right: auto; }
+  .hero-tags_list img[src*="vertical-divider"] { display: none; }
+  .hero-tag { white-space: nowrap; }
+}
+
+/* Tablet: treća kartica ne visi sama lijevo, nego je na sredini */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .products_content:not(.left) > .products_wrap > :last-child:nth-child(odd),
+  .testimonials_wrap > :last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 12px); }
+  .about_image-wrap { max-width: 480px; }
+  [data-cp-gallery] { max-width: 520px; }
+}
+
+/* Mobitel: tekst u naslovnom dijelu čitljiv preko fotografije */
+@media screen and (max-width: 767px) {
+  .section_hero { background-image: linear-gradient(rgba(0, 0, 0, .38), rgba(0, 0, 0, .38)), url("../images/opt/hero-800.webp"); }
+}
