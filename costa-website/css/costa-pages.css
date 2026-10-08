@@ -369,8 +369,6 @@ html, body { overflow-x: clip; }
 .section_hero { background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/opt/hero-1600.webp"); }
 @media screen and (max-width: 767px) {
   .section_hero { background-image: linear-gradient(rgba(0, 0, 0, .58), rgba(0, 0, 0, .58)), url("../images/opt/hero-800.webp"); }
-  /* Traka "Oprema koja pravi razliku": na telefonu samo crna traka, bez odsječene bijele */
-  .marquee-horizontal:not(.black) { display: none; }
   /* Sivo slovo u pozadini O nama na telefonu izgleda kao mrlja */
   .section_about { background-image: none; }
 }
@@ -527,4 +525,10 @@ html, body { overflow-x: clip; }
 }
 @media (prefers-reduced-motion: reduce) {
   .nav_list .cp-menu-extra, .nav_list .nav_link, .nav_list > .button, .nav_list .cp-menu-bottom { transition: none !important; }
+}
+
+/* Ukrštene trake "Oprema koja pravi razliku" na telefonu: veći ugao, da se vidi tekst na obje trake */
+@media screen and (max-width: 767px) {
+  .marquee-horizontal { transform: rotate(9deg); }
+  .marquee-horizontal.black { transform: rotate(-9deg); }
 }
